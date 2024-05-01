@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Setup manager</string>
+    <string name="game_rfactor">rFactor 2</string>
+    <string name="series_f1">F1</string>
+    <string name="series_f2">F2</string>
+    <string name="series_f3">F3</string>
+    <string name="series_f4">F4</string>
+    <string name="series_gt2">GT2</string>
+    <string name="series_gt3">GT3</string>
+    <string name="series_gt4">GT4</string>
+    <string name="series_gt_endurance">GTE</string>
+    <string name="series_lmp2">LMP2</string>
+    <string name="series_lmh">Hypercars</string>
+    <string name="series_other">Other</string>
+
+    <string name="tracks_bahrain">Bahrain</string>
+    <string name="tracks_jeddah">Jeddah</string>
+    <string name="tracks_melbourne">Melbourne</string>
+    <string name="tracks_imola">Imola</string>
+    <string name="tracks_miami">Miami</string>
+    <string name="tracks_barcelona">Barcelona-Catalunya</string>
+    <string name="tracks_baku">Baku</string>
+    <string name="tracks_canada">Canada</string>
+    <string name="tracks_silverstone">Silverstone</string>
+    <string name="tracks_paul_ricard">Circuit Paul Ricard</string>
+    <string name="tracks_hungaroring">Hungaroring</string>
+    <string name="tracks_monza">Monza</string>
+    <string name="tracks_singapore">Marina Bay Street Circuit</string>
+    <string name="tracks_mexico">Autódromo Hermanos Rodríguez</string>
+    <string name="tracks_brazil">Interlagos</string>
+    <string name="tracks_abu_dhabi">Yas Marina Circuit</string>
+    <string name="tracks_qatar">Lusail International Circuit</string>
+    <string name="tracks_las_vegas">Las Vegas</string>
+    <string name="tracks_portimao">Portimao</string>
+    <string name="tracks_china">Shanghai International Circuit</string>
+    <string name="tracks_spa">Spa-Francorchamps</string>
+    <string name="tracks_redbullring">Red Bull Ring</string>
+    <string name="tracks_nurburgring">Nurburgring</string>
+    <string name="tracks_zandvoort">Zandvoort</string>
+    <string name="tracks_suzuka">Suzuka</string>
+
+    <string name="titles_home_screen">Home screen</string>
+    <string name="titles_series">Choose series</string>
+    <string name="titles_car">Choose car</string>
+    <string name="titles_setups">Setup list</string>
+    <string name="titles_setup_editor">Setup editor</string>
+</resources>
