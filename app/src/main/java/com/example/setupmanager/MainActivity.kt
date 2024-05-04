@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             SetupManagerTheme {
                 // A surface container using the 'background' color from the theme
-
+                SetupManagerApp()
                 }
             }
         }

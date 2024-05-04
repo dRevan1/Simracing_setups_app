@@ -18,9 +18,10 @@ fun HomeScreen(
 
 
 @Composable
-fun GameChoiceButton(gameName: String,
-                     onClick: () -> Unit,
-                     modifier: Modifier = Modifier) {
+fun GameChoiceButton(
+    gameName: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier) {
     Button(
         onClick = onClick,
         modifier = modifier.widthIn(min = 250.dp)
