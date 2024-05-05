@@ -7,7 +7,11 @@ class HierarchyGame(name: String, _parent: Hierarchy) {
     public var sons = ArrayList<HierarchySeries>()
 
 
-    fun insertSons(sonsList: ArrayList<HierarchySeries>) {
+    fun insertSons(lines:List<String>) {
+        val sonsList = ArrayList<HierarchySeries>()
+        for (s in lines) {
+            sonsList.add(HierarchySeries(s,this))
+        }
         sons = sonsList
     }
 }
