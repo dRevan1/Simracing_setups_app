@@ -7,24 +7,35 @@ import java.io.File
 import java.io.InputStream
 
 class Hierarchy(context: Context) {
-    public val games = ArrayList<HierarchyGame>()
+    val games = ArrayList<HierarchyGame>()
+    var index: Int = 1
 
     init {
         games.add(HierarchyGame(context.resources.getString(R.string.game_rfactor), this))
-        games.add(HierarchyGame(context.resources.getString(R.string.series_f1), this))
-
         var output: String
-        val input: InputStream
-        input = context.assets.open("rFactor_series.txt")        // https://www.geeksforgeeks.org/how-to-read-a-text-file-in-android/
-        val size: Int = input.available()
-        val buffer = ByteArray(size)
+        var seriesVehicles:List<String>
+
+        var input: InputStream = context.assets.open("rFactor_series.txt")        // https://www.geeksforgeeks.org/how-to-read-a-text-file-in-android/
+        var size: Int = input.available()
+        var buffer = ByteArray(size)
         input.read(buffer)
         output = String(buffer)
 
         var lines:List<String> = output.split(",")
         games[0].insertSons(lines)
-        games[1].insertSons(listOf("F1", "F2"))
 
+        // vozidlá pre F1 rFactor 2
+        input = context.assets.open("rFactor_vehicles.txt")        // https://www.geeksforgeeks.org/how-to-read-a-text-file-in-android/
+        size = input.available()
+        buffer = ByteArray(size)
+        input.read(buffer)
+        output = String(buffer)
+        lines = output.split(";")
+
+        for (i in 0..lines.lastIndex) {
+            seriesVehicles = lines[i].split(",")
+            games[0].sons[i].insertSons(seriesVehicles)
+        }
     }
 
 }

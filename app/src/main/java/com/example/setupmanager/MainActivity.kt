@@ -18,17 +18,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             SetupManagerTheme {
                 // A surface container using the 'background' color from the theme
-                SetupManagerApp()
+                SetupManagerApp(this.applicationContext)
                 }
             }
         }
     }
-
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SetupManagerTheme {
-
-    }
-}
