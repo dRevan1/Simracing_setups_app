@@ -13,7 +13,12 @@ interface TablesDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(setup: Setups)
-
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(vehicle: Vehicle)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(track: Track)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(layout: TrackLayout)
     @Update
     suspend fun update(setup: Setups)
 

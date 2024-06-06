@@ -1,12 +1,13 @@
 package com.example.setupmanager
 
+import android.content.Context
 import android.health.connect.datatypes.units.Power
 
-class Setup(setupName: String) {
+class Setup(setupName: String, context: Context) {
     var name: String = setupName
-    var powertrain: Powertrain = Powertrain()
-    var wheelsBrakes: WheelsBrakes = WheelsBrakes()
-    var suspensionAero: SuspensionAero = SuspensionAero()
-    var dampers: Dampers = Dampers()
-    var chassis: Chassis = Chassis()
+    var powertrain: Powertrain = Powertrain(context)
+    var wheelsBrakes: WheelsBrakes = WheelsBrakes(context)
+    var suspensionAero: SuspensionAero = SuspensionAero(context)
+    var dampers: Dampers = Dampers(context)
+    var chassis: Chassis = Chassis(context)
 }

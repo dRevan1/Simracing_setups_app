@@ -89,6 +89,7 @@
     <string name="tire_pressure_text">Tire pressure</string>
     <string name="camber_text">Camber</string>
     <string name="brake_disc_text">Brake disc</string>
+    <string name="brake_bias_text">Brake bias</string>
 
     <string name="front_wheels_header">FRONT WHEELS</string>
     <string name="compound_front">Compound front</string>
@@ -103,7 +104,8 @@
     <string name="brake_disc_rear">Brake disc rear</string>
 
     <string name="brakes_header">BRAKES</string>
-    <string name="brake_bias">Brake bias</string>
+    <string name="brake_bias_front">Brake bias front</string>
+    <string name="brake_bias_rear">Brake bias rear</string>
     <string name="max_pedal_force">Max pedal force</string>
     <string name="front_brake_duct">Front brake duct blanking</string>
     <string name="rear_brake_duct">Rear brake duct blanking</string>
@@ -172,8 +174,10 @@
 
     <string name="weight_header">WEIGHT</string>
     <string name="vertical">Vertical</string>
-    <string name="lateral">Lateral</string>
-    <string name="weight_dist">Weight distribution</string>
+    <string name="lateral_first">Lateral first</string>
+    <string name="lateral_second">Lateral second</string>
+    <string name="weight_dist_front">Weight distribution front</string>
+    <string name="weight_dist_rear">Weight distribution rear</string>
     <string name="wedge">Wedge</string>
 
 
