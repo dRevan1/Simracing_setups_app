@@ -1,0 +1,6 @@
+Aston Martin Vantage GTE,
+BMW M8,
+Corvette C7.R,
+Corvette C8.R,
+Ferrari 488 GTE,
+Porsche 991RSR

@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.setupmanager.HierarchyGame
 import com.example.setupmanager.HierarchySeries
+import com.example.setupmanager.NavigationScreens
 
 @Composable
 fun VehiclesScreen(
@@ -27,6 +28,7 @@ fun VehiclesScreen(
             VehicleCard(
                 vehicleName = currentSeries.sons[it].vehicleName,
                 navController = navController,
+                vehicleIndex = it,
                 modifier = modifier)
         }
     }
@@ -36,12 +38,16 @@ fun VehiclesScreen(
 @Composable
 fun VehicleCard(
     vehicleName: String,
+    vehicleIndex: Int,
     navController: NavController,
     modifier: Modifier) {
 
     Card(
         modifier
             .padding(10.dp)
+            .clickable {
+                navController.navigate(route = (NavigationScreens.Setups.name + "/$vehicleIndex"))
+            }
     ) {
         Text(vehicleName)
     }

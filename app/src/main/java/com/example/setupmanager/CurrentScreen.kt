@@ -17,6 +17,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.setupmanager.ui.HomeScreen
 import com.example.setupmanager.ui.SeriesScreen
+import com.example.setupmanager.ui.SetupsScreen
 import com.example.setupmanager.ui.VehiclesScreen
 
 enum class NavigationScreens(@StringRes val title: Int) {
@@ -33,6 +34,8 @@ fun SetupManagerApp(
     navController: NavHostController = rememberNavController()
 ) {
     val hierarchy = Hierarchy(context)
+    var seriesParentIndex = 0
+    var vehicleParentIndex = 0
 
     NavHost(
         navController = navController,
@@ -61,8 +64,9 @@ fun SetupManagerApp(
                 type = NavType.IntType
             })
         ) { seriesIndex ->
+            seriesParentIndex = seriesIndex.arguments?.getInt("seriesIndex")!!
             VehiclesScreen(
-                currentSeries = hierarchy.games[0].sons[seriesIndex.arguments?.getInt("seriesIndex")!!],
+                currentSeries = hierarchy.games[0].sons[seriesParentIndex],
                 navController = navController,
                 modifier = Modifier
                     .fillMaxSize()
@@ -73,8 +77,9 @@ fun SetupManagerApp(
                 type = NavType.IntType
             })
         ) { setupsIndex ->
-            VehiclesScreen(
-                currentSeries = hierarchy.games[0].sons[setupsIndex.arguments?.getInt("setupsIndex")!!],
+            vehicleParentIndex = setupsIndex.arguments?.getInt("seriesIndex")!!
+            SetupsScreen(
+                currentVehicle = hierarchy.games[0].sons[seriesParentIndex].sons[vehicleParentIndex],
                 navController = navController,
                 modifier = Modifier
                     .fillMaxSize()

@@ -1,0 +1,10 @@
+2021 - Alfa Romeo Racing Orlen,
+2021 - Alpine F1 Team,
+2021 - Aston Martin Cognizant F1 Team,
+2021 - McLaren F1 Team,
+2021 - Mercedes-AMG Petronas F1 Team,
+2021 - Red Bull Racing Honda,
+2021 - Scuderia AlphaTauri Honda,
+2021 - Scuderia Mission Winnow Ferrari,
+2021 - Uralkali Haas F1 Team,
+2021 - Williams Racing
