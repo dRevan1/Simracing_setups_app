@@ -1,4 +1,5 @@
 <resources>
+    <!-- Základné názvy -->
     <string name="app_name">Setup manager</string>
     <string name="game_rfactor">rFactor 2</string>
     <string name="series_f1">F1</string>
@@ -13,6 +14,7 @@
     <string name="series_lmh">Hypercars</string>
     <string name="series_other">Other</string>
 
+    <!-- Trate -->
     <string name="tracks_bahrain">Bahrain</string>
     <string name="tracks_jeddah">Jeddah</string>
     <string name="tracks_melbourne">Melbourne</string>
@@ -39,9 +41,140 @@
     <string name="tracks_zandvoort">Zandvoort</string>
     <string name="tracks_suzuka">Suzuka</string>
 
+    <!-- Navigácia -->
     <string name="titles_home_screen">Home screen</string>
     <string name="titles_series">Choose series</string>
     <string name="titles_car">Choose car</string>
     <string name="titles_setups">Setup list</string>
     <string name="titles_setup_editor">Setup editor</string>
+
+    <!-- Powertrain vlastnosti -->
+    <string name="engine_electronics_header">ENGINE &amp; ELECTRONICS</string>
+    <string name="starting_fuel">Starting fuel</string>
+    <string name="rev_limiter">Rev limiter</string>
+    <string name="engine_mix">Engine mixture</string>
+    <string name="radiator_tape">Radiator tape</string>
+    <string name="boost_map">Boost mapping</string>
+    <string name="brake_map">Brake map</string>
+    <string name="onboard_tc">Onboard TC</string>
+    <string name="onboard_tc_cut">Onboard TC power cut</string>
+    <string name="onboard_tc_angle">Onboard TC slip angle</string>
+    <string name="onboard_abs">Onboard ABS</string>
+
+    <string name="gearing_header">GEARING</string>
+    <string name="gear_1st">1st gear</string>
+    <string name="gear_2nd">2nd gear</string>
+    <string name="gear_3rd">3rd gear</string>
+    <string name="gear_4th">4th gear</string>
+    <string name="gear_5th">5th gear</string>
+    <string name="gear_6th">6th gear</string>
+    <string name="gear_7th">7th gear</string>
+    <string name="gear_8th">8th gear</string>
+    <string name="gear_final">Final</string>
+    <string name="gear_reverse">Reverse</string>
+
+    <string name="automatic_gearbox_header">AUTOMATIC GEARBOX</string>
+    <string name="auto_upshift">Auto upshift</string>
+    <string name="auto_downshift">Auto downshift</string>
+
+    <string name="differential_header">DIFFERENTIAL</string>
+    <string name="pump">Pump</string>
+    <string name="power">Power</string>
+    <string name="coast">Coast</string>
+    <string name="preload">Preload</string>
+    <string name="torque_split">Torque split</string>
+
+    <!-- Wheels & brakes vlastnosti -->
+    <string name="compound_text">Compound</string>
+    <string name="tire_pressure_text">Tire pressure</string>
+    <string name="camber_text">Camber</string>
+    <string name="brake_disc_text">Brake disc</string>
+
+    <string name="front_wheels_header">FRONT WHEELS</string>
+    <string name="compound_front">Compound front</string>
+    <string name="tire_pressure_front">Tire pressure front</string>
+    <string name="camber_front">Camber front</string>
+    <string name="brake_disc_front">Brake disc front</string>
+
+    <string name="rear_wheels_header">REAR WHEELS</string>
+    <string name="compound_rear">Compound rear</string>
+    <string name="tire_pressure_rear">Tire pressure rear</string>
+    <string name="camber_rear">Camber rear</string>
+    <string name="brake_disc_rear">Brake disc rear</string>
+
+    <string name="brakes_header">BRAKES</string>
+    <string name="brake_bias">Brake bias</string>
+    <string name="max_pedal_force">Max pedal force</string>
+    <string name="front_brake_duct">Front brake duct blanking</string>
+    <string name="rear_brake_duct">Rear brake duct blanking</string>
+    <string name="handbrake_pressure">Handbrake pressure</string>
+
+    <!-- Suspension & aero vlastnosti -->
+    <string name="spring_rate_text">Spring rate</string>
+    <string name="tender_spring_rate_text">Tender spring rate</string>
+    <string name="packers_text">Packers</string>
+    <string name="ride_height_text">Ride height</string>
+    <string name="spring_rubber_text">Spring rubber</string>
+    <string name="antiroll_bar_text">Anti-roll bar</string>
+    <string name="toe_in_text">Toe-in</string>
+    <string name="toe_in_offset_text">Toe-in offset</string>
+
+    <string name="front_suspension_header">FRONT SUSPENSION</string>
+    <string name="spring_rate_front">Spring rate front</string>
+    <string name="tender_spring_rate_front">Tender spring rate front</string>
+    <string name="packers_front">Packers front</string>
+    <string name="ride_height_front">Ride height front</string>
+    <string name="spring_rubber_front">Spring rubber front</string>
+    <string name="antiroll_bar_front">Anti-roll bar front</string>
+    <string name="toe_in_front">Toe-in front</string>
+    <string name="toe_in_offset_front">Toe-in offset front</string>
+
+    <string name="rear_suspension_header">REAR SUSPENSION</string>
+    <string name="spring_rate_rear">Spring rate rear</string>
+    <string name="tender_spring_rate_rear">Tender spring rate rear</string>
+    <string name="packers_rear">Packers rear</string>
+    <string name="ride_height_rear">Ride height rear</string>
+    <string name="spring_rubber_rear">Spring rubber rear</string>
+    <string name="antiroll_bar_rear">Anti-roll bar rear</string>
+    <string name="toe_in_rear">Toe-in rear</string>
+    <string name="toe_in_offset_rear">Toe-in offset rear</string>
+
+    <string name="aero_header">AERODYNAMICS</string>
+    <string name="front_downforce">Front downforce</string>
+    <string name="rear_downforce">Rear downforce</string>
+
+    <!-- Dampers vlastnosti -->
+    <string name="slow_bump_text">Slow bump</string>
+    <string name="slow_rebound_text">Slow rebound</string>
+    <string name="fast_bump_text">Fast bump</string>
+    <string name="fast_rebound_text">Fast rebound</string>
+
+    <string name="front_dampers_header">FRONT DAMPERS</string>
+    <string name="slow_bump_front">Slow bump front</string>
+    <string name="slow_rebound_front">Slow rebound front</string>
+    <string name="fast_bump_front">Fast bump front</string>
+    <string name="fast_rebound_front">Fast rebound front</string>
+
+    <string name="rear_dampers_header">REAR DAMPERS</string>
+    <string name="slow_bump_rear">Slow bump rear</string>
+    <string name="slow_rebound_rear">Slow rebound rear</string>
+    <string name="fast_bump_rear">Fast bump rear</string>
+    <string name="fast_rebound_rear">Fast rebound rear</string>
+
+    <!-- Chassis vlastnosti -->
+    <string name="chassis_header">CHASSIS</string>
+    <string name="fender_flare">Fender flare</string>
+    <string name="track_bar">Track bar</string>
+    <string name="caster">Caster</string>
+    <string name="front_wheel_track">Front wheel track</string>
+    <string name="rear_wheel_track">Rear wheel track</string>
+    <string name="steering_lock">Steering lock</string>
+
+    <string name="weight_header">WEIGHT</string>
+    <string name="vertical">Vertical</string>
+    <string name="lateral">Lateral</string>
+    <string name="weight_dist">Weight distribution</string>
+    <string name="wedge">Wedge</string>
+
+
 </resources>

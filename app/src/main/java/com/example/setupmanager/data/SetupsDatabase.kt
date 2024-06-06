@@ -6,7 +6,7 @@ import androidx.room.RoomDatabase
 @Database(entities = [Vehicle::class, Track::class, TrackLayout::class, Setups::class], version = 1, exportSchema = false)
 abstract class SetupsDatabase : RoomDatabase() {
 
-    abstract fun setupsDatabase(): SetupsDatabase
+    abstract fun tablesDao(): TablesDao
 
     companion object {
         @Volatile
