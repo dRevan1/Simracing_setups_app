@@ -12,9 +12,9 @@ import kotlinx.coroutines.flow.Flow
 interface TablesDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(setup: Setups)
+    fun insert(setup: Setups)
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(vehicle: Vehicle)
+    fun insert(vehicle: Vehicle)
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insert(track: Track)
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -26,8 +26,12 @@ interface TablesDao {
     suspend fun delete(setup: Setups)
 
     @Query("DELETE from tracks")
-    fun delete()
+    fun deleteTracks()
 
+    @Query("DELETE from layouts")
+    fun deleteLayouts()
+    @Query("DELETE from setups")
+    fun deleteSetups()
     @Query("SELECT * from layouts WHERE id = :id")
     fun getTrackLayouts(id: Int): Flow<List<TrackLayout>>
 

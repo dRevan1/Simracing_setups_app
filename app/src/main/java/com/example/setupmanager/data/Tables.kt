@@ -7,23 +7,23 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "vehicles")
 data class Vehicle (
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
+    val id: Int,
     var name: String
 )
 
 @Entity(tableName = "tracks")
 data class Track (
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
+    val id: Int,
     var name: String
 )
 
 @Entity(tableName = "layouts", foreignKeys = [
-    ForeignKey(entity = Track::class, parentColumns = ["id"], childColumns = ["id"], onDelete = ForeignKey.CASCADE)
+    ForeignKey(entity = Track::class, parentColumns = ["id"], childColumns = ["trackId"], onDelete = ForeignKey.CASCADE)
 ])
 data class TrackLayout (
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
+    val id: Int,
     val trackId: Int,
     var name: String
 )
@@ -35,7 +35,7 @@ data class TrackLayout (
 ])
 data class Setups (
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
+    val id: Int,
     val carId: Int,
     val trackId: Int,
     val layoutId: Int,
