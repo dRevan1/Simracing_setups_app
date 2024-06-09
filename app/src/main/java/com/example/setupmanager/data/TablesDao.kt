@@ -16,14 +16,17 @@ interface TablesDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(vehicle: Vehicle)
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(track: Track)
+    fun insert(track: Track)
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(layout: TrackLayout)
+    fun insert(layout: TrackLayout)
     @Update
     suspend fun update(setup: Setups)
 
     @Delete
     suspend fun delete(setup: Setups)
+
+    @Query("DELETE from tracks")
+    fun delete()
 
     @Query("SELECT * from layouts WHERE id = :id")
     fun getTrackLayouts(id: Int): Flow<List<TrackLayout>>

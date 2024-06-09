@@ -8,10 +8,11 @@ interface SetupsDatabaseRepository {
 
     suspend fun insertSetup(setup: Setups)
     suspend fun insertVehicle(vehicle: Vehicle)
-    suspend fun insertTrack(track: Track)
-    suspend fun insertLayout(layout: TrackLayout)
+    fun insertTrack(track: Track)
+    fun insertLayout(layout: TrackLayout)
     suspend fun updateSetup(setup: Setups)
     suspend fun deleteSetup(setup: Setups)
+    fun deleteTracks()
     fun getTrackLayoutsStream(trackId: Int): Flow<List<TrackLayout>>
     fun getVehicleStream(carId: Int): Flow<Vehicle?>
     fun getTrackStream(trackId: Int): Flow<Track?>

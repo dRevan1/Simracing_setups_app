@@ -8,7 +8,6 @@ import java.io.InputStream
 
 class Hierarchy(context: Context) {
     val games = ArrayList<HierarchyGame>()
-    var index: Int = 1
 
     init {
         games.add(HierarchyGame(context.resources.getString(R.string.game_rfactor), this))
@@ -34,7 +33,7 @@ class Hierarchy(context: Context) {
 
         for (i in 0..lines.lastIndex) {
             seriesVehicles = lines[i].split(",")
-            games[0].sons[i].insertSons(seriesVehicles)
+            games[0].sons[i].insertSons(seriesVehicles, context)
         }
     }
 

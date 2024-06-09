@@ -1,8 +1,7 @@
 package com.example.setupmanager
 
-class HierarchyVehicles(name: String, _parent: HierarchySeries, index: Int) {
+class HierarchyVehicles(name: String, _parent: HierarchySeries) {
     val vehicleName: String = name
     val parent: HierarchySeries = _parent
-    val id: Int = index
     var setupList = mutableListOf<Setup>()
 }
