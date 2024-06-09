@@ -38,6 +38,9 @@ interface TablesDao {
     @Query("SELECT * from vehicles WHERE id = :id")
     fun getVehicle(id: Int): Flow<Vehicle>
 
+    @Query("SELECT * from vehicles WHERE name = :name")
+    fun getVehicle(name: String): Vehicle
+
     @Query("SELECT * from tracks WHERE id = :id")
     fun getTrack(id: Int): Flow<Track>
 

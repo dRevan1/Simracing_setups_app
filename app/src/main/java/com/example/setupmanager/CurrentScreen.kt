@@ -23,6 +23,7 @@ import com.example.setupmanager.data.TrackLayout
 import com.example.setupmanager.ui.HomeScreen
 import com.example.setupmanager.ui.SeriesScreen
 import com.example.setupmanager.ui.SetupsScreen
+import com.example.setupmanager.ui.SetupsViewModel
 import com.example.setupmanager.ui.VehiclesScreen
 
 enum class NavigationScreens(@StringRes val title: Int) {
@@ -40,9 +41,12 @@ fun SetupManagerApp(
 ) {
     val hierarchy = Hierarchy(context)
     val database: SetupsDatabase = SetupsDatabase.getDatabase(context = context)
+    //database.tablesDao().insert(Setups(0,1,1,1, "q"))
+    //database.tablesDao().insert(Setups(0,1,1,1, "race"))
+    //database.tablesDao().insert(Setups(0,11,2,5, "q"))
     //database.insertTracks(database, context)
     //LoadLayouts(database = database)
-    database.tablesDao().deleteSetups()
+    //database.tablesDao().deleteSetups()
 
     var seriesParentIndex = 0
     var vehicleParentIndex = 0
@@ -90,9 +94,11 @@ fun SetupManagerApp(
             vehicleParentIndex = setupsIndex.arguments?.getInt("seriesIndex")!!
             SetupsScreen(
                 currentVehicle = hierarchy.games[0].sons[seriesParentIndex].sons[vehicleParentIndex],
+                context = context,
                 navController = navController,
                 modifier = Modifier
-                    .fillMaxSize()
+                    .fillMaxSize(),
+                viewModel = SetupsViewModel(database.tablesDao(), hierarchy.games[0].sons[seriesParentIndex].sons[vehicleParentIndex])
             )
         }
     }

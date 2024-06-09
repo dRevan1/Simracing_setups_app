@@ -17,6 +17,7 @@ interface SetupsDatabaseRepository {
     fun deleteSetups()
     fun getTrackLayoutsStream(trackId: Int): Flow<List<TrackLayout>>
     fun getVehicleStream(carId: Int): Flow<Vehicle?>
+    fun getVehicleStream(carName: String): Vehicle
     fun getTrackStream(trackId: Int): Flow<Track?>
     fun getVehicleSetupsStream(carId: Int): Flow<List<Setups>>
 

@@ -14,6 +14,7 @@ class OfflineSetupsRepository(private val tablesDao: TablesDao): SetupsDatabaseR
     override fun deleteSetups() = tablesDao.deleteSetups()
     override fun getTrackLayoutsStream(trackId: Int): Flow<List<TrackLayout>> = tablesDao.getTrackLayouts(trackId)
     override fun getVehicleStream(carId: Int): Flow<Vehicle?> = tablesDao.getVehicle(carId)
+    override fun getVehicleStream(carName: String): Vehicle  = tablesDao.getVehicle(carName)
     override fun getTrackStream(trackId: Int): Flow<Track?> = tablesDao.getTrack(trackId)
     override fun getVehicleSetupsStream(carId: Int): Flow<List<Setups>> = tablesDao.getSetups(carId)
 }
